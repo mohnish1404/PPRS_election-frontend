@@ -1,0 +1,76 @@
+/* Page background */
+.login-page {
+  min-height: 100vh;
+  background: #f4f7f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card */
+.login-card {
+  width: 380px;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #0b5394; /* NIC blue */
+  padding: 30px 25px;
+}
+
+/* Title */
+.login-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0b5394;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* Input */
+.login-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.login-input:focus {
+  border-color: #0b5394;
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background: #0b5394;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-btn:hover {
+  background: #083c6b;
+}
+
+/* Error */
+.login-error {
+  color: red;
+  font-size: 13px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Footer small */
+.login-footer {
+  margin-top: 15px;
+  font-size: 12px;
+  text-align: center;
+  color: #64748b;
+}

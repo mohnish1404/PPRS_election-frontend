@@ -1,0 +1,303 @@
+/* RegisterPage.css */
+
+.rp-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #2196f3 0%, #ffffff 50%, #ffcc99 100%);
+}
+
+.rp-tricolor {
+  display: flex;
+  height: 4px;
+}
+.rp-tricolor-saffron { flex: 1; background: #FF9933; }
+.rp-tricolor-white { flex: 1; background: #FFFFFF; }
+.rp-tricolor-green { flex: 1; background: #138808; }
+
+/* Navbar */
+.rp-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 32px;
+  background: rgba(30,60,140,0.95);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.rp-navbar-left { display: flex; align-items: center; gap: 12px; }
+.rp-emblem-box { width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.rp-navbar-title { color: white; font-weight: 700; font-size: 14px; margin: 0; }
+.rp-navbar-subtitle { color: #93c5fd; font-size: 12px; margin: 0; }
+.rp-navbar-right { display: flex; align-items: center; gap: 20px; }
+.rp-navbar-link { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #bfdbfe; background: none; border: none; cursor: pointer; transition: color 0.2s; }
+.rp-navbar-link:hover { color: white; }
+
+/* Main layout */
+.rp-main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 32px; }
+.rp-card-outer {
+  width: 85%;
+  border-radius: 24px;
+  background: white;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.18);
+  display: flex;
+  padding: 30px;
+}
+
+/* Left panel */
+.rp-left-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 48px;
+  background: white;
+}
+.rp-portal-logo { width: 95px; height: 95px; margin-bottom: 18px; }
+.rp-hindi-title { font-size: 26px; font-weight: 800; color: #000; font-family: serif; margin-bottom: 4px; line-height: 1.3; }
+.rp-english-title { font-size: 24px; font-weight: 700; color: #000; margin-bottom: 2px; }
+.rp-system-name { font-size: 20px; font-weight: 700; color: #b45309; margin-bottom: 20px; margin-top: 4px; }
+.rp-illustration-wrap { width: 100%; max-width: 340px; background: white; display: flex; justify-content: center; }
+.rp-illustration { width: 100%; height: auto; display: block; object-fit: contain; }
+
+/* Right panel */
+.rp-right-panel { width: 520px; min-width: 480px; display: flex; align-items: flex-start; justify-content: center; padding: 0 32px; background: transparent; }
+.rp-form-card {
+  width: 100%;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.25);
+  border: 1px solid rgba(200,215,255,0.6);
+}
+.rp-form-card-topbar { height: 4px; background: linear-gradient(90deg, #f97316, #3b82f6, #06b6d4); border-radius: 20px 20px 0 0; }
+.rp-form-body { padding: 24px 20px; }
+
+.rp-form-header { display: flex; flex-direction: column; align-items: center; margin-bottom: 16px; }
+.rp-form-logo { width: 55px; height: 55px; margin-bottom: 6px; }
+.rp-form-title { font-size: 24px; font-weight: 700; color: #000; margin: 0; }
+.rp-form-divider { margin-top: 4px; width: 80px; height: 2px; background: #1e3a8a; }
+
+/* Form fields */
+.rp-field-group { margin-bottom: 10px; }
+.rp-field-label { font-size: 11px; font-weight: 700; color: #6b7280; margin-bottom: 4px; display: block; letter-spacing: 0.05em; text-transform: uppercase; }
+.rp-field-required { color: #ef4444; }
+.rp-input-wrap {
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+}
+.rp-input-wrap.has-error { border-color: #ef4444; }
+.rp-input {
+  flex: 1;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  color: #374151;
+}
+.rp-input::placeholder { color: #9ca3af; }
+.rp-field-error { color: #ef4444; font-size: 12px; margin-top: 2px; }
+
+/* Password rules */
+.rp-password-rules { margin-bottom: 8px; border-radius: 12px; padding: 8px; background: #f8fafc; border: 1px solid #e2e8f0; }
+.rp-password-rules-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 8px; }
+.rp-rule-item { display: flex; align-items: center; gap: 4px; }
+.rp-rule-check { font-size: 12px; font-weight: 700; }
+.rp-rule-check.valid { color: #22c55e; }
+.rp-rule-check.invalid { color: #d1d5db; }
+.rp-rule-text { font-size: 12px; }
+.rp-rule-text.valid { color: #16a34a; }
+.rp-rule-text.invalid { color: #9ca3af; }
+
+/* Captcha */
+.rp-captcha-row { display: flex; align-items: center; gap: 8px; }
+.rp-captcha-box-wrap { position: relative; display: inline-block; }
+.rp-captcha-refresh {
+  position: absolute; top: -10px; right: -10px;
+  background: white; border: 1.5px solid #3b82f6;
+  border-radius: 50%; width: 22px; height: 22px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; z-index: 1;
+  box-shadow: 0 2px 6px rgba(59,130,246,0.3);
+}
+.rp-captcha-canvas { border-radius: 10px; border: 1.5px solid #3b82f6; }
+.rp-captcha-input-wrap { display: flex; align-items: center; border-radius: 12px; padding: 12px; flex: 1; background: #f8fafc; border: 1.5px solid #e2e8f0; }
+
+/* Terms & Privacy */
+.rp-legal-block { margin-bottom: 16px; margin-top: 8px; }
+.rp-legal-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.rp-legal-row.align-start { align-items: flex-start; }
+.rp-checkbox { width: 16px; height: 16px; min-width: 16px; accent-color: #1e3a8a; cursor: pointer; }
+.rp-checkbox.with-margin { margin-top: 2px; }
+.rp-legal-label { font-size: 13px; color: #374151; cursor: pointer; line-height: 1.4; }
+.rp-legal-link { color: #1d4ed8; font-weight: 600; text-decoration: none; background: none; border: none; padding: 0; cursor: pointer; font: inherit; }
+.rp-legal-link:hover { text-decoration: underline; }
+.rp-legal-error { color: #dc2626; font-size: 12px; margin-top: 8px; padding: 8px 12px; background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; }
+
+/* Submit button */
+.rp-submit-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+}
+.rp-submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Bottom links */
+.rp-bottom-links {
+  margin-top: 16px; padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+  display: flex; align-items: center; justify-content: center; gap: 16px;
+}
+.rp-bottom-link { font-weight: 500; font-size: 16px; color: #2563eb; text-decoration: none; }
+.rp-bottom-link:hover { text-decoration: underline; }
+.rp-bottom-divider { color: #e2e8f0; }
+
+/* Modal (shared by legal + footer modal) */
+.rp-modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 2000; padding: 20px;
+}
+.rp-modal-box { background: white; border-radius: 16px; width: 95%; max-width: 600px; max-height: 80vh; overflow-y: auto; box-shadow: 0 25px 60px rgba(0,0,0,0.3); }
+.rp-modal-topbar { height: 4px; background: linear-gradient(90deg, #f97316, #3b82f6, #06b6d4); }
+.rp-modal-body { padding: 24px; }
+.rp-modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.rp-modal-title { margin: 0; color: #1e3a8a; font-size: 18px; font-weight: 800; }
+.rp-modal-close { background: #f1f5f9; border: none; border-radius: 8px; width: 32px; height: 32px; cursor: pointer; }
+.rp-modal-text { font-size: 13px; color: #475569; line-height: 1.7; }
+
+/* Footer */
+.rp-footer { background: #0f1e3d; }
+.rp-footer-top { padding: 24px 32px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.rp-footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.rp-footer-heading { color: #f97316; font-weight: 700; font-size: 13px; margin-bottom: 10px; text-transform: uppercase; }
+.rp-footer-text { color: #93c5fd; font-size: 12px; line-height: 1.6; margin: 0; }
+.rp-footer-links { display: flex; flex-direction: column; gap: 6px; }
+.rp-footer-link { color: #93c5fd; font-size: 12px; text-decoration: none; background: none; border: none; text-align: left; cursor: pointer; padding: 0; transition: color 0.2s; }
+.rp-footer-link:hover { color: white; }
+.rp-footer-bottom { padding: 12px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.rp-footer-copy { color: #64748b; font-size: 11px; }
+.rp-footer-copy-divider { margin: 0 8px; }
+.rp-footer-meta { display: flex; align-items: center; gap: 12px; }
+.rp-footer-ssl { display: flex; align-items: center; gap: 6px; color: #64748b; font-size: 11px; }
+.rp-footer-badge { padding: 3px 10px; border-radius: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #64748b; font-size: 11px; }
+
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+  .rp-main {
+    padding: 16px;
+    align-items: flex-start;
+  }
+
+  .rp-card-outer {
+    width: 100%;
+    flex-direction: column;
+    padding: 16px;
+    gap: 0;
+  }
+
+  /* Left panel hide karo mobile pe */
+  .rp-left-panel {
+    display: none;
+  }
+
+  /* Right panel full width */
+  .rp-right-panel {
+    width: 100%;
+    min-width: unset;
+    padding: 0;
+  }
+
+  .rp-form-card {
+    width: 100%;
+  }
+
+  /* Navbar compact */
+  .rp-navbar {
+    padding: 10px 16px;
+  }
+
+  .rp-emblem-box {
+    width: 44px;
+    height: 44px;
+  }
+
+  .rp-navbar-title {
+    font-size: 12px;
+  }
+
+  .rp-navbar-subtitle {
+    font-size: 10px;
+  }
+
+  /* Footer responsive */
+  .rp-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .rp-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .rp-footer-top {
+    padding: 20px 16px;
+  }
+
+  .rp-footer-bottom {
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rp-main {
+    padding: 8px;
+  }
+
+  .rp-card-outer {
+    padding: 8px;
+    border-radius: 16px;
+  }
+
+  .rp-form-body {
+    padding: 16px 14px;
+  }
+
+  .rp-captcha-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rp-captcha-input-wrap {
+    width: 100%;
+  }
+
+  .rp-bottom-links {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .rp-bottom-divider {
+    display: none;
+  }
+}

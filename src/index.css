@@ -1,0 +1,30 @@
+@import "tailwindcss";
+/* 
+body {
+  margin: 0;
+  background-color: white;
+  color: black;
+}
+.lang-toggle {
+  display: flex;
+  width: 200px;
+  border-radius: 25px;
+  background: #e6f2ff;
+  overflow: hidden;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.toggle-option {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  transition: 0.3s;
+  color: #007bff;
+}
+
+.toggle-option.active {
+  background: #007bff;
+  color: white;
+} */
+
